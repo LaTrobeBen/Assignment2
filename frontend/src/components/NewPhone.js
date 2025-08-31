@@ -14,8 +14,8 @@ function NewPhone(props) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                phoneNumber,
-                phoneType
+                phone_number: phoneNumber,
+                phone_type: phoneType
             })
         });
 
