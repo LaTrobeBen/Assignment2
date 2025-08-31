@@ -59,6 +59,47 @@ Replace `container_ID` with the actual ID of the container you want to execute.
 
 ## Executing API
 
+## Task 2- API Command Demonstrations
+1. Show Contact (GET)
+```bash
+http get http://localhost/api/contacts/1
+```
+
+2. Add Contact (POST)
+```bash
+http post http://localhost/api/contacts name='Justin'
+```
+
+3. Delete Contact (DELETE)
+```bash
+http delete http://localhost/api/contacts/2
+```
+
+4. Update Contact (PUT)
+```bash
+http put http://localhost/api/contacts/1 name='Benjamin'
+```
+
+5. Show Phone (GET)
+```bash
+http get http://localhost/api/contacts/1/phones/1
+```
+
+6. Add Phone (POST)
+```bash
+http post http://localhost/api/contacts/1/phones name='Home' number='040320323'
+```
+
+7. Delete Phone (DELETE)
+```bash
+http delete http://localhost/api/contacts/1/phones/1
+```
+
+8. Update Phone (PUT)
+```bash
+http put http://localhost/api/contacts/1/phones/1 name="Work"
+```
+
 ### Contact API
 
 
@@ -132,3 +173,5 @@ http get http://localhost/api/contacts/1/phones
 ```
 
 ### Phone API
+
+
