@@ -2,7 +2,10 @@ import { useState } from 'react';
 
 function NewContact(props) {
     const {contacts, setContacts} = props;
-    const [name, setName] = useState('');
+    const [contactDetails, setContactDetails] = useState({
+        name: '',
+        address: ''
+    });
 
     async function createContact(e) {
         e.preventDefault();
@@ -13,7 +16,8 @@ function NewContact(props) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                name
+                name: contactDetails.name,
+                address: contactDetails.address
             })
         });
 
@@ -23,12 +27,19 @@ function NewContact(props) {
             setContacts([...contacts, data]);
         }
 
-        setName('');
+        setContactDetails({
+            name: '',
+            address: ''
+        });
     }
 
 	return (
         <form className='new-contact' onSubmit={createContact}>
-            <input type='text' placeholder='Name' onChange={(e) => setName(e.target.value)} value={name}/>
+            <label for='Name'>Contact Name:</label>
+            <input id='Name' type='text' placeholder='Name' onChange={(e) => setContactDetails({...contactDetails, name: e.target.value})} value={contactDetails.name}/>
+            
+            <label for='Address'>Contact Address:</label>
+            <input id='Adress' type='text' placeholder='Address' onChange={(e) => setContactDetails({...contactDetails, address: e.target.value})} value={contactDetails.address}/>
             <button className='button green' type='submit'>Create Contact</button>
         </form>
 	);
