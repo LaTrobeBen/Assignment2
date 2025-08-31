@@ -2,10 +2,7 @@
 
 IMPORTANT: Once you've cloned this to your forked repository, ensure that you continuously update this document as you complete each task to demonstrate your ongoing progress.
 
-Please include your shared repository link here:
-
-Example:
-Choiru's shared repository: https://github.com/choiruzain-latrobe/Assignment2.git
+Please include your shared repository link here: Ben's shared repository: https://github.com/LaTrobeBen/Assignment2.git
 
 
 Make sure for **your case it is in Private**
