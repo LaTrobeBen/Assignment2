@@ -20,14 +20,35 @@
 }
 .contact > .title {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+    align-items: start;
     justify-content: space-between;
     width: 100%;
+}
+
+.contact > .title > h2 {
+    margin: 0px;
+    text-align: center;
+    font-weight: bold;
 }
 .contact > .title > h3 {
     margin: 0px;
     text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: start;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
 }
 
 .button {
