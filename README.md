@@ -1,8 +1,7 @@
 # README.md
 
-IMPORTANT: Once you've cloned this to your forked repository, ensure that you continuously update this document as you complete each task to demonstrate your ongoing progress.
-
-Please include your shared repository link here: Ben's shared repository: https://github.com/LaTrobeBen/Assignment2.git
+Assignment2: This is Option A
+Github Repo: Ben's shared repository: https://github.com/LaTrobeBen/Assignment2.git
 
 
 Make sure for **your case it is in Private**
