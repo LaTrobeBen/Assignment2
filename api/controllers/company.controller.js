@@ -7,7 +7,7 @@ exports.create = (req, res) => {
     const company = {
         company_name: req.body.company_name,
         company_address: req.body.company_address,
-        contact_id: parseInt(req.params.contact_id)
+        contact_id: parseInt(req.params.contactId)
     };
 
     Companies.create(company)
@@ -27,7 +27,7 @@ exports.findAll = (req, res) => {
 
     Companies.findAll({
         where: {
-            contact_id: parseInt(req.params.contact_id)
+            contact_id: parseInt(req.params.contactId)
         }
     })
         .then(data => {
@@ -44,8 +44,8 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
     Companies.findOne({
         where: {
-            contact_id: req.params.contact_id,
-            company_id: req.params.company_id
+            contact_id: req.params.contactId,
+            company_id: req.params.companyId
         }
     })
         .then(data => {
@@ -60,10 +60,10 @@ exports.findOne = (req, res) => {
 
 // Update one company by id
 exports.update = (req, res) => {
-    const id = req.params.company_id;
+    const id = req.params.companyId;
 
     Companies.update(req.body, {
-        where: { company_id: id, contact_id: req.params.contact_id }
+        where: { company_id: id, contact_id: req.params.contactId }
     })
         .then(num => {
             if (num == 1) {
@@ -85,10 +85,10 @@ exports.update = (req, res) => {
 
 // Delete one company by id
 exports.delete = (req, res) => {
-    const id = req.params.company_id;
+    const id = req.params.companyId;
 
     Companies.destroy({
-        where: { company_id: id, contact_id: req.params.contact_id }
+        where: { company_id: id, contact_id: req.params.contactId }
     })
         .then(num => {
             if (num == 1) {
