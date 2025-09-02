@@ -145,6 +145,7 @@ Created the model for company with the attributes:
 `company_name`
 `company_address`
 `contact_id` FK references contacts.id
+
 <img width="471" height="465" alt="company-model" src="https://github.com/user-attachments/assets/4b41b87d-d54d-4d35-a4a4-f0ceebcfe11f" />
 
 
