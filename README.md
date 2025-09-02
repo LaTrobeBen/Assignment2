@@ -145,65 +145,86 @@ Created the model for company with the attributes:
 `company_name`
 `company_address`
 `contact_id` FK references contacts.id
+<img width="471" height="465" alt="company-model" src="https://github.com/user-attachments/assets/4b41b87d-d54d-4d35-a4a4-f0ceebcfe11f" />
+
 
 ### Routes company
 #### Company Route into app.js
 Updated the express router to use the comapny routes.
+<img width="329" height="97" alt="company-routes-app" src="https://github.com/user-attachments/assets/eeccad95-3000-4b72-9681-cce57148429d" />
+
 
 #### Created routes for companies
 11. Show Company (GET)
 ```bash
 http get http://localhost/api/contacts/1/companies/1
 ```
+<img width="414" height="305" alt="show-company" src="https://github.com/user-attachments/assets/c01e255e-2527-4cb8-9803-dd2891fde87d" />
 
 12. Add Company (POST)
 ```bash
 http post http://localhost/api/contacts/1/companies company_name='My Business' company_address='Glenelg'
 ```
+<img width="688" height="312" alt="add-company" src="https://github.com/user-attachments/assets/bd9b9428-dad2-41c5-926b-385381f4724e" />
 
 13. Delete Company (DELETE)
 ```bash
 http delete http://localhost/api/contacts/1/companies/2
 ```
+<img width="428" height="233" alt="delete-company" src="https://github.com/user-attachments/assets/048d81c2-cd02-4d15-a693-ed6c69ef4848" />
 
 14. Update Company (PUT)
 ```bash
 http put http://localhost/api/contacts/1/companies/1 company_name="My First Business" company_address="Glenelg North"
 ```
+<img width="684" height="237" alt="update-company" src="https://github.com/user-attachments/assets/927a19f7-5647-49c8-bd48-e0c36e453aa0" />
 
 15. Show All Companies (GET)
 ```bash
 http get http://localhost/api/contacts/1/companies
 ```
+<img width="414" height="439" alt="show-all-companies" src="https://github.com/user-attachments/assets/77fe9a84-cdb9-4cd9-ba42-ca7eb40099e2" />
 
 ### Company controllers
 Create company controller
+<img width="432" height="363" alt="create-company-controller" src="https://github.com/user-attachments/assets/9dc71291-a059-4fa8-b661-0bcd7a3b192e" />
 
 Show all companies for contact controller
+<img width="462" height="312" alt="get-all-companies-controller" src="https://github.com/user-attachments/assets/d9810c13-a7c6-4749-b3e7-e9856494fa80" />
 
 Show company controller
+<img width="466" height="312" alt="show-company-controller" src="https://github.com/user-attachments/assets/6da078f8-713b-47c3-bead-30b89458fb00" />
 
 Update company controller
+<img width="455" height="500" alt="update-company-controller" src="https://github.com/user-attachments/assets/9e5cfcc0-7fd3-4d07-8afb-c33e64a73177" />
 
 Delete company controller
+<img width="448" height="507" alt="delete-company-controller" src="https://github.com/user-attachments/assets/23037f81-e5b4-415d-b143-c7501150a68b" />
 
 ### Company Frontend Updates
 #### Create Company
 Function
+<img width="508" height="481" alt="create-company-function" src="https://github.com/user-attachments/assets/10ac9152-4160-4776-9c7f-609968d9441a" />
 
 UI
+<img width="488" height="69" alt="create-company-ui" src="https://github.com/user-attachments/assets/b1fa656d-ec33-4400-b241-2f43f9e03ccb" />
 
 #### Show companies for contact
 Function
+<img width="467" height="172" alt="show-companies-function" src="https://github.com/user-attachments/assets/b4893e8a-45ab-43e0-af0a-3bd3f9722b6d" />
 
 UI
+<img width="457" height="121" alt="show-companies-ui" src="https://github.com/user-attachments/assets/abf34639-e410-4372-bd32-d405f6846a21" />
 
 
 #### Update Company
 Function
+<img width="512" height="519" alt="update-company-function" src="https://github.com/user-attachments/assets/3a6d707a-e307-4bd5-9050-362413e2699a" />
 
 UI
+<img width="446" height="69" alt="edit-company-ui" src="https://github.com/user-attachments/assets/50655b1f-8b6f-489b-bb38-31b93f7d1bbb" />
 
 
 #### Delete Company
 Function
+<img width="508" height="220" alt="delete-company-function" src="https://github.com/user-attachments/assets/4be828be-f212-42c4-8071-dbb3ce0f3abe" />
