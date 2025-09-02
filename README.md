@@ -32,6 +32,7 @@ To find out the container ID, execute the following command:
 ```bash
 http get http://localhost/api/contacts/1
 ```
+<img width="413" height="260" alt="show-contact" src="https://github.com/user-attachments/assets/714e5525-cd93-4157-9778-7a1ec6ce4400" />
 
 2. Add Contact (POST)
 ```bash
