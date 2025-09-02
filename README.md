@@ -100,78 +100,124 @@ http delete http://localhost/api/contacts/1/phones/1
 http put http://localhost/api/contacts/1/phones/1 name="Work"
 ```
 
-### Contact API
-
-
-1. Add contacts API  (POST)
+## Task 3 Same API endpoints with changed sequelize database modeling
+1. Show Contact (GET)
 ```bash
-http post http://localhost/api/contacts name="Choiru"
-        
-choiruzain@MacMarichoy-7 TestSystem % http post http://localhost/api/contacts name="Choiru"
-HTTP/1.1 200 OK
-Access-Control-Allow-Origin: http://localhost:3000
-Connection: keep-alive
-Content-Length: 102
-Content-Type: application/json; charset=utf-8
-Date: Thu, 08 Aug 2024 21:01:53 GMT
-ETag: W/"66-FmPYAaIkyQoroDwP2JsAZjWTAxs"
-Server: nginx/1.25.1
-Vary: Origin
-X-Powered-By: Express
-
-{
-"createdAt": "2024-08-08T21:01:53.017Z",
-"id": 1,
-"name": "Choiru",
-"updatedAt": "2024-08-08T21:01:53.017Z"
-}
-
+http get http://localhost/api/contacts/2
 ```
-2 Get contacts API  (GET)
 
+2. Add Contact (POST)
+```bash
+http post http://localhost/api/contacts name='Ben' address='Adelaide'
+```
+
+3. Delete Contact (DELETE)
+```bash
+http delete http://localhost/api/contacts/2
+```
+
+4. Update Contact (PUT)
+```bash
+http put http://localhost/api/contacts/2 name='Benjamin' address='Sydney'
+```
+
+5. Show Phone (GET)
+```bash
+http get http://localhost/api/contacts/1/phones/2
+```
+
+6. Add Phone (POST)
+```bash
+http post http://localhost/api/contacts/1/phones phone_type='Home' phone_number='040320323'
+```
+
+7. Delete Phone (DELETE)
+```bash
+http delete http://localhost/api/contacts/1/phones/1
+```
+
+8. Update Phone (PUT)
+```bash
+http put http://localhost/api/contacts/1/phones/2 phone_type="Work" phone_number='123232'
+```
+
+## Extra not used API endpoints
+9. Show All Contacts (GET)
 ```bash
 http get http://localhost/api/contacts
-
-
-choiruzain@MacMarichoy-7 TestSystem % http get http://localhost/api/contacts
-HTTP/1.1 200 OK
-Access-Control-Allow-Origin: http://localhost:3000
-Connection: keep-alive
-Content-Length: 104
-Content-Type: application/json; charset=utf-8
-Date: Thu, 08 Aug 2024 21:04:58 GMT
-ETag: W/"68-V+4KuL2xahYt8YAkKG6rKdR7wHg"
-Server: nginx/1.25.1
-Vary: Origin
-X-Powered-By: Express
-
-[
-{
-"createdAt": "2024-08-08T21:01:53.017Z",
-"id": 1,
-"name": "Choiru",
-"updatedAt": "2024-08-08T21:01:53.017Z"
-}
-]
-
-
 ```
-3. Show/create the API commmand to delete the contacts (DELETE)
 
+10. Show All Phones (GET)
 ```bash
-
-
-
-
-
+http get http://localhost/api/contacts/2/phones
 ```
 
-4. Show/create the API command to edit the contacts (PUT)
+## Creating Companies in model, controller, routes and frontend
+### Model Company
+Created the model for company with the attributes:
+`company_id` PK
+`company_name`
+`company_address`
+`contact_id` FK references contacts.id
+
+### Routes company
+#### Company Route into app.js
+Updated the express router to use the comapny routes.
+
+#### Created routes for companies
+11. Show Company (GET)
+```bash
+http get http://localhost/api/contacts/1/companies/1
 ```
-http get http://localhost/api/contacts/1/phones
 
+12. Add Company (POST)
+```bash
+http post http://localhost/api/contacts/1/companies company_name='My Business' company_address='Glenelg'
 ```
 
-### Phone API
+13. Delete Company (DELETE)
+```bash
+http delete http://localhost/api/contacts/1/companies/2
+```
+
+14. Update Company (PUT)
+```bash
+http put http://localhost/api/contacts/1/companies/1 company_name="My First Business" company_address="Glenelg North"
+```
+
+15. Show All Companies (GET)
+```bash
+http get http://localhost/api/contacts/1/companies
+```
+
+### Company controllers
+Create company controller
+
+Show all companies for contact controller
+
+Show company controller
+
+Update company controller
+
+Delete company controller
+
+### Company Frontend Updates
+#### Create Company
+Function
+
+UI
+
+#### Show companies for contact
+Function
+
+UI
 
 
+#### Update Company
+Function
+
+UI
+
+
+#### Delete Company
+Function
