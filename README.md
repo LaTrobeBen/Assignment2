@@ -25,38 +25,6 @@ To find out the container ID, execute the following command:
    docker compose up --build
    ```
 
-4 **Access postgreSQL in the container:**
-Once you have the container ID, you can execute the container using the following command:
-You will see the example of running the PostgreSQL inside the container.
-   ```bash
-   docker exec -it testsystem-db-1 psql -U postgres
-   choiruzain@MacMarichoy TestSystem % docker exec -it testsystem-db-1 psql -U postgres                                       
-   psql (15.3)
-   Type "help" for help.
-   
-   postgres=# \dt
-             List of relations
-    Schema |   Name   | Type  |  Owner   
-   --------+----------+-------+----------
-    public | contacts | table | postgres
-    public | phones   | table | postgres
-   (2 rows)
-  
-    postgres=# select * from contacts;
-    id |  name  |         createdAt         |         updatedAt         
-   ----+--------+---------------------------+---------------------------
-     1 | Helmut | 2024-08-08 11:57:57.88+00 | 2024-08-08 11:57:57.88+00
-    (1 row)
-    postgres=# select * from phones;
-    id | phone_type |   number    | contactId |         createdAt          |         updatedAt          
-   ----+------------+-------------+-----------+----------------------------+----------------------------
-     1 | Work       | 081431      |         1 | 2024-08-08 11:59:04.386+00 | 2024-08-08 11:59:04.386+00
-
-
-postgres=# select * from contacts;
-   ```
-Replace `container_ID` with the actual ID of the container you want to execute.
-
 ## Executing API
 
 ## Task 2- API Command Demonstrations
